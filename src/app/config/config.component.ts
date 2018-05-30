@@ -8,7 +8,20 @@ import {ConfigService, Config} from './config.service';
     <div>
       <button (click)="clear(); showConfig()">Get</button>
       <button (click)="clear(); showConfigResponse()">Get Response</button>
+      <button (click)="clear()">Clear</button>
+      <button (click)="clear(); makeError()">Error</button>
+      <span *ngIf="config">
+        <p>Heroes API URL is "{{config.heroesUrl}}"</p>
+        <p>Textfile URL is "{{config.textfile}}"</p>
+      <div *ngIf="headers">
+        Response headers:
+        <ul>
+          <li *ngFor="let header of headers">{{header}}</li>
+        </ul>
+      </div>
+      </span>
     </div>
+    <p *ngIf="error" class="error">{{error | json}}</p>
   `,
   styleUrls: ['./config.component.css']
 })
@@ -55,5 +68,9 @@ export class ConfigComponent {
         // access the body directly, which is typed as `Config`.
         this.config = {...resp.body};
       });
+  }
+
+  makeError() {
+    this.configService.makeIntentionalError().subscribe(null, error => this.error = error);
   }
 }
