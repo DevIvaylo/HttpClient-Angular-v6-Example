@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
 export class AppComponent {
   showConfig = false;
   showDownloader = false;
+  showHeroes = false;
 
   toggleConfig() {
     this.showConfig = !this.showConfig;
@@ -17,4 +18,7 @@ export class AppComponent {
     this.showDownloader = !this.showDownloader;
   }
 
+  toggleHeroes() {
+    this.showHeroes = !this.showHeroes;
+  }
 }
