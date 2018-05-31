@@ -7,9 +7,14 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   showConfig = false;
+  showDownloader = false;
 
   toggleConfig() {
     this.showConfig = !this.showConfig;
+  }
+
+  toggleDownloader() {
+    this.showDownloader = !this.showDownloader;
   }
 
 }
