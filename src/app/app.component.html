@@ -2,6 +2,10 @@
 <label for="config">Config</label>
 <input type="checkbox" id="downloader" [checked]="showDownloader" (click)="toggleDownloader()">
 <label for="downloader">Downloader</label>
+<input type="checkbox" id="heroes" [checked]="showHeroes" (click)="toggleHeroes()">
+<label for="heroes">Heroes</label>
+
 
 <app-config *ngIf="showConfig"></app-config>
 <app-downloader *ngIf="showDownloader"></app-downloader>
+<app-heroes *ngIf="showHeroes"></app-heroes>
