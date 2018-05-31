@@ -3,6 +3,7 @@ import {ConfigService, Config} from './config.service';
 
 @Component({
   selector: 'app-config',
+  providers: [ConfigService],
   template: `
     <h3>Get configuration from JSON file</h3>
     <div>
