@@ -4,8 +4,10 @@
 <label for="downloader">Downloader</label>
 <input type="checkbox" id="heroes" [checked]="showHeroes" (click)="toggleHeroes()">
 <label for="heroes">Heroes</label>
-
+<input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+<label for="search">Search</label>
 
 <app-config *ngIf="showConfig"></app-config>
 <app-downloader *ngIf="showDownloader"></app-downloader>
 <app-heroes *ngIf="showHeroes"></app-heroes>
+<app-package-search *ngIf="showSearch"></app-package-search>
