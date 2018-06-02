@@ -17,6 +17,10 @@ import {DownloaderService} from './downloader/downloader.service';
 import {HeroesService} from './heroes/heroes.service';
 import {HttpErrorHandler} from './http-error-handler.service';
 import {PackageSearchService} from './package-search/package-search.service';
+import {httpInterceptorProviders} from './http-interceptors';
+import {AuthService} from './auth.service';
+import {MessageService} from './message.service';
+import {RequestCache, RequestCacheWithMap} from './request-cache.service';
 
 
 @NgModule({
@@ -37,7 +41,11 @@ import {PackageSearchService} from './package-search/package-search.service';
     DownloaderService,
     HeroesService,
     HttpErrorHandler,
-    PackageSearchService
+    PackageSearchService,
+    httpInterceptorProviders,
+    AuthService,
+    MessageService,
+    {provide: RequestCache, useClass: RequestCacheWithMap},
   ],
   bootstrap: [AppComponent]
 })
