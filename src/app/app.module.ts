@@ -9,13 +9,14 @@ import {AppComponent} from './app.component';
 import {ConfigComponent} from './config/config.component';
 import {DownloaderComponent} from './downloader/downloader.component';
 import {HeroesComponent} from './heroes/heroes.component';
+import {PackageSearchComponent} from './package-search/package-search.component';
 
 // services
 import {ConfigService} from './config/config.service';
 import {DownloaderService} from './downloader/downloader.service';
 import {HeroesService} from './heroes/heroes.service';
 import {HttpErrorHandler} from './http-error-handler.service';
-import { PackageSearchComponent } from './package-search/package-search.component';
+import {PackageSearchService} from './package-search/package-search.service';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { PackageSearchComponent } from './package-search/package-search.componen
     ConfigService,
     DownloaderService,
     HeroesService,
-    HttpErrorHandler
+    HttpErrorHandler,
+    PackageSearchService
   ],
   bootstrap: [AppComponent]
 })
