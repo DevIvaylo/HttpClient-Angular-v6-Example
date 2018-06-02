@@ -9,6 +9,7 @@ export class AppComponent {
   showConfig = false;
   showDownloader = false;
   showHeroes = false;
+  showSearch = false;
 
   toggleConfig() {
     this.showConfig = !this.showConfig;
@@ -21,4 +22,9 @@ export class AppComponent {
   toggleHeroes() {
     this.showHeroes = !this.showHeroes;
   }
+
+  toggleSearch() {
+    this.showSearch = !this.showSearch;
+  }
+
 }
