@@ -8,7 +8,7 @@ import {HeroesService, Hero} from './heroes.service';
     <h3>Heroes</h3>
     <div>
       <label>Hero name:
-        <input #heroName />
+        <input #heroName/>
       </label>
       <!-- (click) passes input value to add() and then clears the input -->
       <button (click)="add(heroName.value); heroName.value=''">
@@ -24,7 +24,7 @@ import {HeroesService, Hero} from './heroes.service';
         <a (click)="edit(hero)">
           <span class="badge">{{ hero.id || -1 }}</span>
           <span *ngIf="hero!==editHero">{{hero.name}}</span>
-          <input *ngIf="hero===editHero"  [(ngModel)]="hero.name"
+          <input *ngIf="hero===editHero" [(ngModel)]="hero.name"
                  (blur)="update()" (keyup.enter)="update()">
         </a>
         <button class="delete" title="delete hero"
